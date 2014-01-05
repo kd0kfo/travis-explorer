@@ -1,9 +1,8 @@
-language: python
-python:
-    - "2.7"
-install: echo Hello World
-script:
-    - which python-config
-    - which python2.7-config
-    - ls $HOME/virtualenv/python2.7/bin
-    - ls /usr/bin/python*
+language: java
+before_install:
+  - wget http://dl.google.com/android/android-sdk_r11-linux.tgz
+  - tar -zxf android-sdk_r11-linux.tgz
+  - export ANDROID_HOME=`pwd`/android-sdk-linux
+  - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+  - android update sdk --no-ui --force
+  - find $ANDROID_HOME
