@@ -7,7 +7,7 @@ install:
     - cd javalib
     - ant jar
     - cd ../
-    - cp java/lib/build/jar/javalib*.jar java/lib/
+    - cp javalib/build/jar/javalib*.jar java/lib/
 script:
     - cd java
     - ant jar
