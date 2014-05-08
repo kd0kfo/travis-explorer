@@ -7,3 +7,6 @@ script:
     - which python2.7-config
     - ls $HOME/virtualenv/python2.7/bin
     - ls /usr/bin/python*
+    - ls /opt/python/2.7.6/
+    - ls /opt/python/2.7.6/include
+    - ls /opt/python/2.7.6/include/python2.7
