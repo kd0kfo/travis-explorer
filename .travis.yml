@@ -1,13 +1,9 @@
-language: java
-install:
-    - cd java/lib
-    - sh download_tested_libs.sh
-    - cd ../../
-    - git clone https://github.com/kd0kfo/javalib.git
-    - cd javalib
-    - ant jar
-    - cd ../
-    - cp javalib/build/jar/javalib*.jar java/lib/
+language: python
+python:
+    - "2.7"
+install: echo Hello World
 script:
-    - cd java
-    - ant jar
+    - which python-config
+    - which python2.7-config
+    - ls $HOME/virtualenv/python2.7/bin
+    - ls /usr/bin/python*
